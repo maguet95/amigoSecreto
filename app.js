@@ -1,2 +1,17 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-//prueba//
+//lista de amigo capturados//
+let amigos = [];
+
+
+//Capturar Nombre//
+function agregarAmigo() {
+
+    let capturarNombre =document.getElementById('amigo');
+    // validacion
+    
+    if (nombres == ""){
+       alert ('Por favor, ingrese un nombre')
+    }
+    // Agregagr nombre al array
+    amigos.push(nombres);
+
+}
