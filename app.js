@@ -2,16 +2,41 @@
 let amigos = [];
 
 
-//Capturar Nombre//
+
 function agregarAmigo() {
 
-    let capturarNombre =document.getElementById('amigo');
-    // validacion
-    
-    if (nombres == ""){
-       alert ('Por favor, ingrese un nombre')
-    }
-    // Agregagr nombre al array
-    amigos.push(nombres);
 
+    let inputAmigo = document.getElementById("amigo"); //  Capturar el valor del campo de entrada
+    let nombreAmigo = inputAmigo.value; 
+     // Paso 2: Validar la entrada
+    if (nombreAmigo === "") {
+        alert("Por favor, inserte un nombre.");
+        return; 
+    }
+
+    amigos.push(nombreAmigo); // Añadir el nombre al array de amigos
+    limpiarCaja();    // Limpiar el ombre de la caja
+    
+    actualizarListaAmigos(); // Actualizar la lista de amigos en la página
+  
+}
+
+function limpiarCaja() {
+    document.getElementById("amigo").value = '';
+   
+}
+
+
+function actualizarListaAmigos() {
+    let listaDeAmigos = document.getElementById("listaAmigos");  // lista donde se mostrara los nombres
+    listaDeAmigos.innerHTML = ""; // Limpieza de la lista  previa
+        
+    // Recorrer el arreglo para  asignar los nombres a la lista de amigos 
+    for (let i = 0; i < amigos.length; i++) {
+
+        let elementoNombre = document.createElement("li");
+
+        elementoNombre.textContent = amigos[i];
+        listaDeAmigos.appendChild(elementoNombre);
+    }
 }
