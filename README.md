@@ -11,9 +11,6 @@
 - [¿Cómo funciona?](#-cómo-funciona)
 - [¿Cómo probarlo?](#-cómo-probarlo)
 - [Tecnologías que usé](#-tecnologías-que-usé)
-- [¿Qué aprendí?](#-qué-aprendí)
-- [Problemas que tuve](#-problemas-que-tuve)
-- [¿Puedo ayudar?](#-puedo-ayudar)
 
 ---
 
