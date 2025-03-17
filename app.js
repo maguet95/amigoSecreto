@@ -1,6 +1,6 @@
 //lista de amigo capturados//
 let amigos = [];
-
+let listaDeAmigos = [];
 
 
 function agregarAmigo() {
@@ -39,4 +39,21 @@ function actualizarListaAmigos() {
         elementoNombre.textContent = amigos[i];
         listaDeAmigos.appendChild(elementoNombre);
     }
+}
+
+function sortearAmigo(){
+  // Verificacion que el array no este vacio
+    if (amigos.length === 0) {
+        alert("Oyee, ¿No tiene amigos???, agrega aunque sea uno");
+        return; 
+    }
+    // Generar un indice aleatorio en base al array existente
+    let numeroGenerado = Math.floor(Math.random() * amigos.length);
+    let amigoElegido = amigos[numeroGenerado];
+
+    let elementoResultado = document.getElementById("resultado");
+    elementoResultado.innerHTML = (`¡Tu amigo secreto es: ${amigoElegido}!`)
+        
+   
+
 }
